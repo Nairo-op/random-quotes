@@ -18,6 +18,7 @@ function App(): JSX.Element {
         throw new Error(`HTTP Error: ${response.status}`);
       }
       const data: { content: string; author: string } = await response.json();
+      console.log(data);
       setQuote(data.content || "No quote found.");
       setAuthor(data.author || "Unknown");
     } catch (err) {
