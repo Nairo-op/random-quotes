@@ -9,7 +9,7 @@ function App() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  const fetchQuote = async () => {
+  const fetchQuote = async (): Promise<void> => {
     setIsLoading(true);
     setError(null);
 
@@ -42,7 +42,6 @@ function App() {
       ) : (
         <QuoteCard quote={quote} author={author} />
       )}
-      <Analytics />
     </div>
   );
 }
