@@ -10,11 +10,7 @@ export default function QuoteCard({
   fetchQuote,
 }: QuoteCardProps): JSX.Element {
   return (
-    <div
-      className="fade-in fade-out"
-      id="quote-box"
-      style={{ textAlign: "center" }}
-    >
+    <div className="fade-in" id="quote-box" style={{ textAlign: "center" }}>
       <h1 id="title-text">Random Quotes</h1>
 
       <p id="text">{quote}</p>
