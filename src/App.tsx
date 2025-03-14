@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 import QuoteCard from "./QuoteCard";
-import { Analytics } from "@vercel/analytics/react";
 
-function App() {
+function App(): JSX.Element {
   const [quote, setQuote] = useState<string>("");
   const [author, setAuthor] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -34,13 +33,12 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>Inspirational Quotes</h1>
       {isLoading ? (
         <p>Loading...</p>
       ) : error ? (
         <p className="error">Error: {error}</p>
       ) : (
-        <QuoteCard quote={quote} author={author} />
+        <QuoteCard quote={quote} author={author} fetchQuote={fetchQuote} /> {/* Passing fetchQuote */}
       )}
     </div>
   );
