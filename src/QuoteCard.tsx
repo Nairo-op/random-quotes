@@ -11,7 +11,7 @@ export default function QuoteCard({
 }: QuoteCardProps): JSX.Element {
   return (
     <div
-      className="fade-in,fade-out"
+      className="fade-in fade-out"
       id="quote-box"
       style={{ textAlign: "center" }}
     >
