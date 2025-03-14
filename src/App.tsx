@@ -38,7 +38,7 @@ function App(): JSX.Element {
       ) : error ? (
         <p className="error">Error: {error}</p>
       ) : (
-        <QuoteCard quote={quote} author={author} fetchQuote={fetchQuote} /> {/* Passing fetchQuote */}
+        <QuoteCard quote={quote} author={author} fetchQuote={fetchQuote} />
       )}
     </div>
   );
