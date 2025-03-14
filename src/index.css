@@ -28,7 +28,7 @@
 }
 a {
   padding: 9px;
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   font-weight: 500;
   color: #ffffff;
   text-decoration: inherit;
@@ -49,14 +49,15 @@ body {
 
 button {
   margin-right: 50px;
-  border: 1px solid rgb(255, 255, 255);
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #1a1a1a00;
   cursor: pointer;
   transition: ease-in-out 0.25s;
+  border: 1px solid rgb(255, 255, 255);
+
 }
 button:hover {
   background-color: #ffffff;
