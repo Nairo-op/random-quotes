@@ -35,8 +35,8 @@ a {
   transition: ease-in-out 0.25s;
 }
 a:hover {
-  color: #ffffff;
-  background-color: black;
+  color: #000000;
+  background-color: rgb(255, 255, 255);
 }
 
 body {
