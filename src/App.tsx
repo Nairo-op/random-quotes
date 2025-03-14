@@ -18,9 +18,8 @@ function App(): JSX.Element {
         throw new Error(`HTTP Error: ${response.status}`);
       }
       const data: { content: string; author: string } = await response.json();
-      console.log(data);
-      setQuote(data.content || "No quote found.");
-      setAuthor(data.author || "Unknown");
+      setQuote(data[0].content || "No quote found.");
+      setAuthor(data[0].author || "Unknown");
     } catch (err) {
       setError((err as Error).message || "An unexpected error occurred.");
     } finally {
