@@ -17,9 +17,12 @@ function App(): JSX.Element {
       if (!response.ok) {
         throw new Error(`HTTP Error: ${response.status}`);
       }
-      const data: { content: string; author: string } = await response.json();
-      setQuote(data[0].content || "No quote found.");
-      setAuthor(data[0].author || "Unknown");
+      const data: Array<{ content: string; author: string }> =
+        await response.json(); // Define the response as an array of objects
+      if (data.length > 0) {
+        setQuote(data[0].content || "No quote found."); // Access the first item in the array
+        setAuthor(data[0].author || "Unknown");
+      }
     } catch (err) {
       setError((err as Error).message || "An unexpected error occurred.");
     } finally {
